@@ -2,7 +2,9 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Area;
 use AppBundle\Entity\Device;
+use AppBundle\Entity\Siren;
 use AppBundle\Interactor\AlarmDetector;
 use AppBundle\Interactor\AreaScraper;
 use AppBundle\Interactor\DeviceNotifier;
@@ -44,14 +46,47 @@ class DefaultController extends Controller {
         // we wanna get the latest results first, right?
         $queryBuilder->orderBy('sirens.alertIdentifier', 'DESC');
 
+        $sirenDetails = [];
+        $areaDetails = [];
+
+        /**
+         * @var Siren[] $results;
+         */
         $results = $queryBuilder->getQuery()->getResult();
-        foreach($results as $currentResult){
+        foreach($results as $currentSiren){
 
             // they realized he wanted to cook. He had no formal training.
 
-            print_r($currentResult);
+            $currentDetails = [];
+            $currentDetails['alert_id'] = $currentSiren->getId();
+            $currentDetails['timestamp'] = $currentSiren->getTimestamp();
+
+            foreach($currentSiren->getAreas() as $currentArea){
+
+                /* @var Area $currentArea; */
+
+                $currentDetails['area_ids'][] = $currentArea->getGooglePlaceIdentifier();
+
+                if($areaDetails[$currentArea->getGooglePlaceIdentifier()]){
+                    continue;
+                }
+
+                $currentAreaDetails = [];
+                $currentAreaDetails['area_id'] = $currentArea->getGooglePlaceIdentifier();
+                $currentAreaDetails['toponym_long'] = $currentArea->getToponymLong();
+                $currentAreaDetails['toponym_short'] = $currentArea->getToponymShort();
+
+                $areaDetails[$currentArea->getGooglePlaceIdentifier()] = $currentAreaDetails;
+
+            }
+
+            $sirenDetails[] = $currentDetails;
 
         }
+
+        $outputData = ['sirens' => $sirenDetails, 'areas' => $areaDetails];
+
+        return new JsonResponse(['status' => 1, 'response' => $outputData]);
 
         die();
 
