@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller {
 
     /**
-     * @Route("/test", name="homepage")
+     * @Route("/test")
      */
     public function testResponsiveness(){
         return new JsonResponse(['status' => 1, 'message' => 'success']);
