@@ -58,7 +58,7 @@ class DefaultController extends Controller {
             // they realized he wanted to cook. He had no formal training.
 
             $currentDetails = [];
-            $currentDetails['alert_id'] = $currentSiren->getId();
+            $currentDetails['alert_id'] = $currentSiren->getAlertIdentifier();
             $currentDetails['timestamp'] = $currentSiren->getTimestamp();
 
             foreach($currentSiren->getAreas() as $currentArea){
@@ -73,8 +73,17 @@ class DefaultController extends Controller {
 
                 $currentAreaDetails = [];
                 $currentAreaDetails['area_id'] = $currentArea->getGooglePlaceIdentifier();
-                $currentAreaDetails['toponym_long'] = $currentArea->getToponymLong();
                 $currentAreaDetails['toponym_short'] = $currentArea->getToponymShort();
+                $currentAreaDetails['toponym_long'] = $currentArea->getToponymLong();
+
+                $currentAreaDetails['center_latitude'] = $currentArea->getCenterLatitude();
+                $currentAreaDetails['center_longitude'] = $currentArea->getCenterLongitude();
+
+                $currentArea['north_edge_latitude'] = $currentArea->getNorthEdgeLatitude();
+                $currentArea['south_edge_latitude'] = $currentArea->getSouthEdgeLatitude();
+                $currentArea['west_edge_longitude'] = $currentArea->getWestEdgeLongitude();
+                $currentArea['east_edge_longitude'] = $currentArea->getEastEdgeLongitude();
+
 
                 $areaDetails[$currentArea->getGooglePlaceIdentifier()] = $currentAreaDetails;
 
