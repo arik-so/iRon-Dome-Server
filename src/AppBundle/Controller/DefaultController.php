@@ -9,9 +9,18 @@ use AppBundle\Interactor\DeviceNotifier;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Config\FileLocator;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller {
+
+    /**
+     * @Route("/test", name="homepage")
+     */
+    public function testResponsiveness(){
+        return new JsonResponse(['status' => 1, 'message' => 'success']);
+    }
+
     /**
      * @Route("/alarms/detect", name="homepage")
      */
