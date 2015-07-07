@@ -67,7 +67,7 @@ class DefaultController extends Controller {
 
                 $currentDetails['area_ids'][] = $currentArea->getGooglePlaceIdentifier();
 
-                if($areaDetails[$currentArea->getGooglePlaceIdentifier()]){
+                if(isset($areaDetails[$currentArea->getGooglePlaceIdentifier()])){
                     continue;
                 }
 
