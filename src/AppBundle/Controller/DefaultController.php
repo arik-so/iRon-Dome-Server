@@ -41,7 +41,10 @@ class DefaultController extends Controller {
                 ->setParameter('lastKnownID', $lastKnownID);
         }
 
-        $results = $queryBuilder->getQuery()->getArrayResult();
+        // we wanna get the latest results first, right?
+        $queryBuilder->orderBy('sirens.alertIdentifier', 'DESC');
+
+        $results = $queryBuilder->getQuery()->getResult();
         foreach($results as $currentResult){
 
             // they realized he wanted to cook. He had no formal training.
