@@ -34,9 +34,12 @@ class DefaultController extends Controller {
 
         $queryBuilder = $entityManager->createQueryBuilder();
         $queryBuilder->select('sirens')
-            ->from('AppBundle:Siren', 'sirens')
-            ->where('sirens.alertIdentifier > :lastKnownID')
-            ->setParameter('lastKnownID', $lastKnownID);
+            ->from('AppBundle:Siren', 'sirens');
+
+        if($lastKnownID != null){
+            $queryBuilder->where('sirens.alertIdentifier > :lastKnownID')
+                ->setParameter('lastKnownID', $lastKnownID);
+        }
 
         $results = $queryBuilder->getQuery()->getArrayResult();
         foreach($results as $currentResult){
