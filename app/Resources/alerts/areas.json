@@ -1,0 +1,263 @@
+{
+    "1": {
+        "\u05d0\u05d5\u05d3\u05dd": {
+            "address_components": [
+                {
+                    "long_name": "Odem",
+                    "short_name": "Odem",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Odem",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 33.198066,
+                        "lng": 35.7532059
+                    },
+                    "southwest": {
+                        "lat": 33.190618,
+                        "lng": 35.7449891
+                    }
+                },
+                "location": {
+                    "lat": 33.19511,
+                    "lng": 35.747904
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.198066,
+                        "lng": 35.7532059
+                    },
+                    "southwest": {
+                        "lat": 33.190618,
+                        "lng": 35.7449891
+                    }
+                }
+            },
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        "\u05d0\u05dc \u05e8\u05d5\u05dd": {
+            "address_components": [
+                {
+                    "long_name": "El-Rum",
+                    "short_name": "El-Rum",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "El-Rum",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 33.1827811,
+                        "lng": 35.7750641
+                    },
+                    "southwest": {
+                        "lat": 33.176116,
+                        "lng": 35.766402
+                    }
+                },
+                "location": {
+                    "lat": 33.180519,
+                    "lng": 35.770095
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.1827811,
+                        "lng": 35.7750641
+                    },
+                    "southwest": {
+                        "lat": 33.176116,
+                        "lng": 35.766402
+                    }
+                }
+            },
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        "\u05d1\u05d5\u05e7\u05e2\u05ea\u05d0": {
+            "address_components": [
+                {
+                    "long_name": "Buq'ata",
+                    "short_name": "Buq'ata",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Buq'ata",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 33.239228,
+                        "lng": 35.8084861
+                    },
+                    "southwest": {
+                        "lat": 33.180769,
+                        "lng": 35.751464
+                    }
+                },
+                "location": {
+                    "lat": 33.203065,
+                    "lng": 35.779198
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.239228,
+                        "lng": 35.8084861
+                    },
+                    "southwest": {
+                        "lat": 33.180769,
+                        "lng": 35.751464
+                    }
+                }
+            },
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        "\u05de\u05d2'\u05d3\u05dc \u05e9\u05de\u05e1": {
+            "address_components": [
+                {
+                    "long_name": "Majdal al-Shams",
+                    "short_name": "Majdal al-Shams",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Majdal al-Shams",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 33.300717,
+                        "lng": 35.798059
+                    },
+                    "southwest": {
+                        "lat": 33.23705,
+                        "lng": 35.753512
+                    }
+                },
+                "location": {
+                    "lat": 33.267942,
+                    "lng": 35.773344
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.300717,
+                        "lng": 35.798059
+                    },
+                    "southwest": {
+                        "lat": 33.23705,
+                        "lng": 35.753512
+                    }
+                }
+            },
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        "\u05de\u05e1\u05e2\u05d3\u05d4": {
+            "address_components": [
+                {
+                    "long_name": "Mas'ada",
+                    "short_name": "Mas'ada",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Mas'ada",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 33.251749,
+                        "lng": 35.805765
+                    },
+                    "southwest": {
+                        "lat": 33.2043221,
+                        "lng": 35.742541
+                    }
+                },
+                "location": {
+                    "lat": 33.23105,
+                    "lng": 35.756289
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.251749,
+                        "lng": 35.805765
+                    },
+                    "southwest": {
+                        "lat": 33.2043221,
+                        "lng": 35.742541
+                    }
+                }
+            },
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        "\u05e0\u05d5\u05d5\u05d4 \u05d0\u05d8\u05d9''\u05d1": {
+            "address_components": [
+                {
+                    "long_name": "Neve Ativ",
+                    "short_name": "Neve Ativ",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Neve Ativ",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 33.2648701,
+                        "lng": 35.746107
+                    },
+                    "southwest": {
+                        "lat": 33.260472,
+                        "lng": 35.737976
+                    }
+                },
+                "location": {
+                    "lat": 33.26202,
+                    "lng": 35.740574
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 33.2648701,
+                        "lng": 35.746107
+                    },
+                    "southwest": {
+                        "lat": 33.260472,
+                        "lng": 35.737976
+                    }
+                }
+            },
+            "partial_match": true,
+       
