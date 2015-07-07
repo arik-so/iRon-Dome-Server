@@ -6,6 +6,7 @@ use AppBundle\Entity\Device;
 use AppBundle\Interactor\AlarmDetector;
 use AppBundle\Interactor\AreaScraper;
 use AppBundle\Interactor\DeviceNotifier;
+use Doctrine\Common\Persistence\ObjectRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Config\FileLocator;
@@ -23,8 +24,40 @@ class DefaultController extends Controller {
 
     /**
      * @param $lastKnownID
+     * @Route("/alarms")
+     * @Route("/alarms/{lastKnownID}")
      */
-    public function getAlarmsAction($lastKnownID){
+    public function getAlarmsAction($lastKnownID = null){
+
+        $doctrine = $this->getDoctrine();
+        $entityManager = $doctrine->getEntityManager();
+
+        $queryBuilder = $entityManager->createQueryBuilder();
+        $queryBuilder->select('sirens')
+            ->from('AppBundle:Siren', 'sirens')
+            ->where('sirens.alertIdentifier > :lastKnownID')
+            ->setParameter('lastKnownID', $lastKnownID);
+
+        $results = $queryBuilder->getQuery()->getArrayResult();
+        foreach($results as $currentResult){
+
+            // they realized he wanted to cook. He had no formal training.
+
+            print_r($currentResult);
+
+        }
+
+        die();
+
+        // let's get all the sirens after the last known ID
+
+        /**
+         * @var ObjectRepository $sirenRepository;
+         */
+        $sirenRepository = $doctrine->getRepository('AppBundle:Siren');
+
+
+
 
     }
 
