@@ -79,10 +79,10 @@ class DefaultController extends Controller {
                 $currentAreaDetails['center_latitude'] = $currentArea->getCenterLatitude();
                 $currentAreaDetails['center_longitude'] = $currentArea->getCenterLongitude();
 
-                $currentArea['north_edge_latitude'] = $currentArea->getNorthEdgeLatitude();
-                $currentArea['south_edge_latitude'] = $currentArea->getSouthEdgeLatitude();
-                $currentArea['west_edge_longitude'] = $currentArea->getWestEdgeLongitude();
-                $currentArea['east_edge_longitude'] = $currentArea->getEastEdgeLongitude();
+                $currentAreaDetails['north_edge_latitude'] = $currentArea->getNorthEdgeLatitude();
+                $currentAreaDetails['south_edge_latitude'] = $currentArea->getSouthEdgeLatitude();
+                $currentAreaDetails['west_edge_longitude'] = $currentArea->getWestEdgeLongitude();
+                $currentAreaDetails['east_edge_longitude'] = $currentArea->getEastEdgeLongitude();
 
 
                 $areaDetails[$currentArea->getGooglePlaceIdentifier()] = $currentAreaDetails;
