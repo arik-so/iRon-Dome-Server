@@ -22,6 +22,13 @@ class DefaultController extends Controller {
     }
 
     /**
+     * @param $lastKnownID
+     */
+    public function getAlarmsAction($lastKnownID){
+
+    }
+
+    /**
      * @Route("/alarms/detect", name="homepage")
      */
     public function detectAlarmsAction() {
