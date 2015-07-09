@@ -61,7 +61,12 @@ class DefaultController extends Controller {
             $currentDetails['alert_id'] = $currentSiren->getAlertIdentifier();
             $currentDetails['timestamp'] = $currentSiren->getTimestamp();
 
-            foreach($currentSiren->getAreas() as $currentArea){
+            $currentSirenAreas = $currentSiren->getAreas();
+            if(empty($currentSirenAreas)){
+                continue; // we don't wanna return alerts with no attached areas because those are not rockets
+            }
+
+            foreach($currentSirenAreas as $currentArea){
 
                 /* @var Area $currentArea; */
 
