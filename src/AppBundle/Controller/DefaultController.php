@@ -62,7 +62,7 @@ class DefaultController extends Controller {
             $currentDetails['timestamp'] = $currentSiren->getTimestamp();
 
             $currentSirenAreas = $currentSiren->getAreas();
-            if(empty($currentSirenAreas)){
+            if(empty($currentSirenAreas) || count($currentSirenAreas) < 1){
                 continue; // we don't wanna return alerts with no attached areas because those are not rockets
             }
 
