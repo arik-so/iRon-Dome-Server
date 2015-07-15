@@ -16,4 +16,4 @@ COMMANDPATH="php "$BASEDIR"/../../../app/console irondome:alarms:observe"
 
 echo $COMMANDPATH
 echo $COMMANDPATH >> /tmp/observer-log
-# eval $COMMANDPATH >> /tmp/observer-log
+eval $COMMANDPATH
