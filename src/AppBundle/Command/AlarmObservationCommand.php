@@ -9,6 +9,7 @@
 namespace AppBundle\Command;
 
 
+use AppBundle\Entity\Cron;
 use AppBundle\Interactor\AlarmDetector;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -35,6 +36,14 @@ class AlarmObservationCommand extends ContainerAwareCommand{
 
         $kernel = $this->getContainer()->get('kernel');
         $doctrine = $this->getContainer()->get('doctrine');
+
+        $entityManager = $doctrine->getEntityManager();
+
+        $cron = new Cron();
+        $cron->setTimestamp(time());
+        $cron->setAction('Observe Alarms Start');
+        $entityManager->persist($cron);
+        $entityManager->flush();
 
         $isSandbox = $input->getOption('sandbox');
         $isEmulation = $input->getOption('emulate');
