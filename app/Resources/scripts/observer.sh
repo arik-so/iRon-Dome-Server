@@ -15,4 +15,4 @@ echo $SCRIPTPATH
 COMMANDPATH="php "$SCRIPTPATH"/app/console irondome:alarms:observe"
 
 echo $COMMANDPATH >> /tmp/observer-log
-eval $COMMANDPATH
+eval $COMMANDPATH >> /tmp/observer-log
