@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "trying to run observer.sh " >> /tmp/observer-log
+
 BASEDIR=$(dirname $0)
 echo $BASEDIR
 
@@ -12,5 +14,5 @@ echo $SCRIPTPATH
 
 COMMANDPATH="php "$SCRIPTPATH"/app/console irondome:alarms:observe"
 
-echo $COMMANDPATH
+echo $COMMANDPATH >> /tmp/observer-log
 eval $COMMANDPATH
