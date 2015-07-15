@@ -12,7 +12,8 @@ SCRIPTPATH="`( cd \"$MY_PATH\" && pwd )`" # converting the relative path into an
 
 echo $SCRIPTPATH
 
-COMMANDPATH="php "$SCRIPTPATH"/app/console irondome:alarms:observe"
+COMMANDPATH="php "$BASEDIR"/../../../app/console irondome:alarms:observe"
 
+echo $COMMANDPATH
 echo $COMMANDPATH >> /tmp/observer-log
-eval $COMMANDPATH >> /tmp/observer-log
+# eval $COMMANDPATH >> /tmp/observer-log
